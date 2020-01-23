@@ -87,7 +87,8 @@ registerBtn.addEventListener('click', function () {
 
     function dupicateEntry() {
         for (const student of listOfStudents) {
-            if (student.firstName === fName.value)
+            if (student.firstName === fName.value && student.lastName === lName.value && student.birthYear === birthYear.value
+                 )
                 return true;
         }
         return false;
