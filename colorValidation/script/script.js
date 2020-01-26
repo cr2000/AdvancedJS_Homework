@@ -32,17 +32,20 @@ addReminder.addEventListener('click', function () {
     let newReminder = new Reminder(titleVal, priorityVal, colorVal, descVal);
     if (newReminder.title === "" || newReminder.priority === "" || newReminder.color === "" || newReminder.description === "") {
         alert(`fill all fields pls!`);
-    }else if(!allowedColors.includes(colorVal)){
+        return;
+    }
+    if (!allowedColors.includes(colorVal)) {
         alert(`Pick allowed color!`);
-    } else {
-        reminders.push(newReminder);
+        return;
     }
 
 
-        reminders.push(newReminder);
-        //console.log(reminders);
-        //showReminders();
-    });
+
+
+    reminders.push(newReminder);
+    //console.log(reminders);
+    //showReminders();
+});
 
 shReminders.addEventListener('click', showReminders);
 
