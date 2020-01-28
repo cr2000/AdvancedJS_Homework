@@ -1,16 +1,20 @@
+
+
 $(document).ready(function () {
     document.getElementById("callBtn").addEventListener("click", function () {
+        let tbody = document.getElementById("tbody");
         $.ajax({
             url:  "https://swapi.co/api/people/1",
             success: function (response) {
                 console.log("Request successful!");
-                // let responseObject = JSON.parse(response);
+                let responseObject = JSON.parse(response);
                 console.log(response);
 
-
+                
                 let headerOne = document.querySelector("h1");
                 headerOne.innerHTML = "";
                 headerOne.innerHTML = response.name;
+                let tbody = document.getElementById("tbody")
                 let tr = document.createElement("tr");
                 let td_1 = document.createElement("td");
                 let td_2 = document.createElement("td");
