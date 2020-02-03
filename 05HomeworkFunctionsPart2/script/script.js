@@ -22,9 +22,7 @@ fetch('https://raw.githubusercontent.com/sedc-codecademy/sedc7-04-ajs/master/g2/
 // Task 01 - For every student log the following sentence:
 // "FULL_NAME is comming from CITY, he is AGE years old and he is FAILING/PASSING the class" (FILING if his average greade is 1, PASSING if it's 2 or more).
 let sentence = students => students.forEach(student =>
-    console.log(`${student.firstName} ${student.lastName} is comming from
-    ${student.city}, he is ${student.age} years old and he is
-    ${student.averageGrade > 1 ? 'Passing' : 'Failing'} the class.`));
+    console.log(`${student.firstName} ${student.lastName} is comming from ${student.city}, he is ${student.age} years old and he is ${student.averageGrade > 1 ? 'Passing' : 'Failing'} the class.`));
 
 
 
