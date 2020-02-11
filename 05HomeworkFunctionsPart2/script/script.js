@@ -48,7 +48,7 @@ let femaleOver18 =
 // The average age of the students.
 
 let averageAge = students => students.map(student => student.age)
-    .reduce((sum, age) => sum += age, 0)
+    .reduce((sum, age) => sum += age, 0) / students.length
 
 
 
